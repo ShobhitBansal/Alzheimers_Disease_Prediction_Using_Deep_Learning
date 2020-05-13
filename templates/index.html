@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alzheimer's Disease Prediction</title>
+	<link rel = "icon" href = "{{url_for('static', filename='img/title.png')}}" type = "image/x-icon">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Bar-->
+<nav class="navbar navbar-dark fixed-top">
+<div class="container-fluid">
+	<a class="navbar-brand mx-auto" href="#"><img src="{{url_for('static', filename='img/logo.png')}}" alt=""></a>
+</div>	
+</nav>
+
+<!--- Image Background -->
+<div class="container-fluid">
+	<img class="back" src="{{url_for('static', filename='img/background.png')}}">
+</div>	
+
+<div class="caption text-center">
+	
+	<h1 class="display-2">Alzheimer's Prediction</h1>
+	<h3>From MRI-Scans Using Machine Learning</h3>
+	<form class="form-inline" method="POST" action="/" enctype="multipart/form-data">
+		<input  class="form-control" type="file" name="userfile" placeholder="Your Image">
+		<button type="submit" class="btn btn-outline-light btn-lg">Submit</button>	
+	</form>
+	{% if result %}
+	<div class="scan">
+		<div class="row padding">
+			<div class="col-lg-6">
+				<img src="{{result['image']}}" class="scan">
+			</div>
+			<div class="col-lg-6">
+				<h3>Prediction : <i> {{result['prediction']}} </i></h3>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+
+</div>
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding build">
+		<div class="col-lg-6">
+			<h2>How We Build It...</h2>
+			<p>This Azheimer's Prediction Model is based on Convolutional Neural Network, a class of deep neural networks most commonly applied to analyzing visual imagery.</p>
+			<p>A Convolutional Neural Network (ConvNet/CNN) is a Deep Learning algorithm which can take in an input image, assign importance (learnable weights and biases) to various aspects/objects in the image and be able to differentiate one from the other.</p>
+			<p>The model is able to predict three different stages of Alzheimer's Disease, namely NonDemented, MildDemented & VeryMildDemented, with an accuracy of 80%.</p>
+			<button class="btn btn-primary btn-lg" href="#">Learn More</button>
+		</div>
+		<div class="col-lg-6">
+			<img src="{{url_for('static', filename='img/desk.png')}}" class="img-fluid">
+		</div>
+		
+	</div>
+	
+</div>
+
+<hr class="my-4">
+<!--- Fixed background -->
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed">
+			
+		</div>
+		
+	</div>
+</figure>
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<!--- img-fluid for a floating image -->
+			<img src="{{url_for('static', filename='img/philosophy.png')}}" class="img-fluid">
+		</div>	
+		<div class="col-lg-6">
+			<h2>About The Dataset</h2>
+			<p></p>
+			<p>The dataset consists of around 5000 MRI-Scan Images of three different stages of Alzheimer's Disease:</p>
+			<p>-> Non-Demented</p>
+			<p>-> Mild-Demented</p>
+			<p>-> Very-Mild-Demented</p>
+			<p></p>
+			<br>
+		</div>	
+	</div>
+	<hr class="my-4">
+</div>
+
+<!--- Connect -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h2>Connect</h2>
+		</div>
+		<div class="social padding align-items-center" >
+			<div class="col-12 align-items-center">
+				<a href="https://github.com/ShobhitBansal" target="_blank"><i class="fab fa-github"></i></a>
+				<a href="https://www.linkedin.com/in/shobhit-bansal-918129198" target="_blank"><i class="fab fa-linkedin"></i></a>
+			</div>
+		</div>
+		
+	</div>
+	
+</div>
+
+</body>
+</html>
