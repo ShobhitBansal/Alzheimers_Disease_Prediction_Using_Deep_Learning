@@ -30,4 +30,4 @@ def disease():
 
 
 if __name__ == '__main__':
-	app.run(debug=True, threaded = False)
+	app.run(threaded = False)
