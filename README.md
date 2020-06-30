@@ -45,3 +45,9 @@ go to the browser and open http://127.0.0.1:5000
 Upload the MRI-Scan which needs to be tested for Alzheimer's and Click on the Submit button to generate the prediction.
 
 ![](Screenshots/12.png)
+
+## Android Application
+
+Android App based on TFLite Version of the Model
+
+![](Screenshots/13.png)
