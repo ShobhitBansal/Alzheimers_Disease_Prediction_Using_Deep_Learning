@@ -1,4 +1,4 @@
-# Alzheimers_Disease_Prediction_Using_Deep_Learning
+# Alzheimers Disease Prediction Using Deep Learning
 
 This Alzheimer's Disease Prediction Model is based on Convolutional Neural Network, a class of deep neural networks most commonly applied to analyzing visual imagery.
 
